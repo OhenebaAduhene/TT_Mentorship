@@ -18,4 +18,15 @@ public class StudentController {
     public Student getStudent(@PathVariable("id") int id){
         return studentService.registerStudent(id);
     }
+
+    @GetMapping("/post")
+    public String getPost(){
+        return studentService.getPostFromFakeApi();
+    }
+
+    @GetMapping("/posts")
+    public String getPostUsingWebClient(){
+        return studentService.getPostFromFakeApi();
+    }
+
 }
